@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn-1">button 1</button>
+    <button id="btn-2">button 2</button>
+
+    <h1 id="heading-1">heading 1 Tarifull hasan studying at University of Chittagong Home Town Noakhali boshurhat
+        Company Gonj</h1>
+    <h1 id="heading-2">heading 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est cupiditate unde
+        numquam odit quibusdam quos reprehenderit expedita officiis atque?</h1>
+
+    <script>
+        document.getElementById('btn-1').addEventListener('click', function () {
+            document.getElementById('heading-1').style.display = 'none'
+
+            document.getElementById('heading-2').style.display = "block"
+        })
+
+        document.getElementById('btn-2').addEventListener('click', function () {
+            document.getElementById('heading-2').style.display = 'none'
+
+            document.getElementById('heading-1').style.display = "block"
+        })
+    </script>
+</body>
+
+</html>
