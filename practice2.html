@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+
+<body>
+    <h1 id="number">1</h1>
+    <button id="btn-1">button 1</button>
+    <button id="btn-2">button 2</button>
+    <button id="btn-3">button 3</button>
+
+    <script>
+        function putnumber(num) {
+            const h1 = document.getElementById('number')
+            h1.innerText = num
+        }
+        document.getElementById('btn-1').addEventListener('click', function () {
+            putnumber('1')
+        })
+        document.getElementById('btn-2').addEventListener('click', function () {
+            putnumber('2')
+        })
+        document.getElementById('btn-3').addEventListener('click', function () {
+            putnumber('3')
+        })
+    </script>
+</body>
+
+</html>
