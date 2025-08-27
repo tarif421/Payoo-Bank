@@ -56,17 +56,17 @@
             </div>
             <div id="get-bonus-card-btn" class=" form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
                 <img src="./assets/bonus1.png" class="mx-auto" alt="">
-                <h2>Add Money</h2>
+                <h2>Get Bonus</h2>
 
             </div>
-            <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-                <img src="./assets/wallet1.png" class="mx-auto" alt="">
-                <h2>Add Money</h2>
+            <div id="pay-bill-card-btn" class=" form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+                <img src="./assets/purse1.png" class="mx-auto" alt="">
+                <h2>Pay Bill</h2>
 
             </div>
-            <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
-                <img src="./assets/wallet1.png" class="mx-auto" alt="">
-                <h2>Add Money</h2>
+            <div id="transaction-card-btn" class=" form-btn border-2 text-center p-3 rounded-xl">
+                <img src="./assets/transaction1.png" class="mx-auto" alt="">
+                <h2>Transactions</h2>
 
             </div>
 
@@ -147,7 +147,7 @@
             <form action="" class="bg-white rounded-2xl p-8">
 
                 <div class="mt-3">
-                    <label class="font-semibold" for="">Agent Number</label>
+                    <label class="font-semibold" for="">User Amount Number</label>
                     <br>
                     <input type="text" placeholder="Enter 11 digit number"
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
@@ -155,7 +155,7 @@
                 <div class="mt-3">
                     <label class="font-semibold" for="">Amount</label>
                     <br>
-                    <input id="withdraw-amount" type="text" placeholder="Enter Amount to withdraw"
+                    <input id="send-money-amount" type="text" placeholder="Enter Amount to withdraw"
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
                 </div>
                 <div class="mt-3">
@@ -165,7 +165,7 @@
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
                 </div>
 
-                <button class="btn  text-white bg-[#0874f2] w-full rounded-3xl mt-5 ">Withdraw
+                <button id="send-money-btn" class="btn  text-white bg-[#0874f2] w-full rounded-3xl mt-5 ">Send
                     Money</button>
             </form>
         </div>
@@ -174,33 +174,76 @@
             <h1 class="my-5 font-bold">Get Bonus</h1>
 
             <form action="" class="bg-white rounded-2xl p-8">
-
                 <div class="mt-3">
-                    <label class="font-semibold" for="">Agent Number</label>
+                    <label class="font-semibold" for="">Enter Bonus Coupon</label>
                     <br>
-                    <input type="text" placeholder="Enter 11 digit number"
+                    <input type="text" placeholder="Enter your counpon"
+                        class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
+                </div>
+
+                <button class="btn  text-white bg-[#0874f2] w-full rounded-3xl mt-5 ">Get Bonus</button>
+            </form>
+        </div>
+
+        <!-- pay bill -->
+        <div class="form" id="pay-bill-parent">
+            <h1 class="my-5 font-bold">Add Money</h1>
+            <form action="" class="bg-white rounded-2xl p-8">
+                <div>
+                    <h1 class="font-semibold ">Select To Pay</h1>
+                    <select id="select-pay" class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+                        <option disabled selected>Select Bank</option>
+                        <option>BRAC Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                        <option>IFIC Bank</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <label class="font-semibold" for="">Biller Account Number</label>
+                    <br>
+                    <input id="biller-account-number" type="text" placeholder="Enter 11 digit account number"
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
                 </div>
                 <div class="mt-3">
-                    <label class="font-semibold" for="">Amount</label>
+                    <label class="font-semibold" for="">Account To Pay</label>
                     <br>
-                    <input id="withdraw-amount" type="text" placeholder="Enter Amount to withdraw"
+                    <input id="pay-bill-amount" type="text" placeholder="Add Amount to withdraw"
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
                 </div>
                 <div class="mt-3">
                     <label class="font-semibold" for="">Pin Number</label>
                     <br>
-                    <input type="text" placeholder="Enter 4 digit pin number"
+                    <input id="pay-pin" type="text" placeholder="Enter 4 digit pin number"
                         class="input rounded-3xl bg-[#f4f5f7] mt-3 w-full" />
                 </div>
 
-                <button class="btn  text-white bg-[#0874f2] w-full rounded-3xl mt-5 ">Withdraw
-                    Money</button>
+                <button id="pay-bill-btn" class="btn  text-white bg-[#0874f2] w-full rounded-3xl mt-5 ">Pay
+                    Now</button>
+
+
             </form>
         </div>
+        <!-- Transaction -->
+        <div>
+            <div class="form" id="transaction-parent" style="display:none">
+                <div class="flex justify-between items-center">
+                    <h1 class="my-5 font-bold">Transactions</h1>
+                    <p class="text-[#08080880]">View All</p>
+                    <div>
 
+                    </div>
+                </div>
+                <div id="transiction-conatainer">
+
+                </div>
+            </div>
+        </div>
 
     </div>
+
+
+
+
     <script src="js/home.js"></script>
 
 </body>
